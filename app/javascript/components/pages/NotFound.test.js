@@ -14,9 +14,12 @@ import NotFound from './NotFound'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When NotFound renders", () => {
+  let notFoundRender
+  beforeEach(() => {
+    notFoundRender = shallow(<NotFound/>)
+  })
   it("displays a heading", () => {
-    const notFound = shallow(<NotFound />)
-    const notFoundHeading = notFound.find("h3")
-    expect(notFoundHeading.text()).toEqual("This should fail")
+    const notFoundHeading = notFoundRender.find("[className='app__404']")
+    expect(notFoundHeading.text()).toEqual("Not Found")
   })
 })

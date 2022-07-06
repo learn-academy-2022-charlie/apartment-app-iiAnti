@@ -14,9 +14,13 @@ import ApartmentNew from './ApartmentNew'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When ApartmentNew renders", () => {
+  let apartmentNewRender
+  beforeEach(() => {
+    apartmentNewRender = shallow(<ApartmentNew/>)
+  })
   it("displays a heading", () => {
-    const apartmentNew = shallow(<ApartmentNew />)
-    const apartmentNewHeading = apartmentNew.find("h3")
-    expect(apartmentNewHeading.text()).toEqual("This Should Fail")
+    const apartmentNewHeading = apartmentNewRender.find("[className='app__new']")
+    expect(apartmentNewHeading.length).toEqual(1)
+    expect(apartmentNewHeading.text()).toEqual("Add Apartment")
   })
 })

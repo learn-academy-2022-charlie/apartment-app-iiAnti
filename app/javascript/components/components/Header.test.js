@@ -14,9 +14,13 @@ import Header from './Header'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When Header renders", () => {
+  let headerRender 
+  beforeEach(() => {
+    headerRender = shallow(<Header />)
+   })
   it("displays a heading", () => {
-    const header = shallow(<Header />)
-    const headerHeading = header.find("h1")
-    expect(headerHeading.text()).toEqual("This should fail")
+    const headerHeading = headerRender.find("[className='app__header']")
+    expect(headerHeading.length).toEqual(1)
+    expect(headerHeading.text()).toEqual("Hounty Bunter")
   })
 })
