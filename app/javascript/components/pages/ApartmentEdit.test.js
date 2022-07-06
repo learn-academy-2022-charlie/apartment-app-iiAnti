@@ -14,9 +14,13 @@ import ApartmentEdit from './ApartmentEdit'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When ApartmentEdit renders", () => {
+  let apartmentEditRender
+  beforeEach(() => {
+   apartmentEditRender = shallow(<ApartmentEdit />)
+  })
   it("displays a heading", () => {
-    const apartmentEdit = shallow(<ApartmentEdit />)
-    const apartmentEditHeading = apartmentEdit.find("h3")
-    expect(apartmentEditHeading.text()).toEqual("This Should Fail")
+    const apartmentEditHeading = apartmentEditRender.find("[className='app__edit']")
+    expect(apartmentEditHeading.length).toEqual(1)
+    expect(apartmentEditHeading.text()).toEqual("Edit Apartment")
   })
 })

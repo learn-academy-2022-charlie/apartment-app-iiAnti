@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class ApartmentIndex extends Component {
   render() {
     return (
-      <h3>ApartmentIndex</h3>
+      <h3 className='app__index'>Apartments</h3>
     )
   }
 }
