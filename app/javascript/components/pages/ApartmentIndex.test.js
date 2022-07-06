@@ -23,4 +23,4 @@ describe("When ApartmentIndex renders", () => {
     expect(apartmentIndexHeading.length).toEqual(1)
     expect(apartmentIndexHeading.text()).toEqual("Apartments")
   })
-}) 
+})  

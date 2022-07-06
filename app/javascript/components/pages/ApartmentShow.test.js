@@ -22,5 +22,5 @@ describe("When ApartmentShow renders", () => {
     const apartmentShowHeading = apartmentShowRender.find("[className='app__show']")
     expect(apartmentShowHeading.length).toEqual(1)
     expect(apartmentShowHeading.text()).toEqual("Show")
-  })
+  }) 
 })
