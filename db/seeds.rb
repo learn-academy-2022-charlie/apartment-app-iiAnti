@@ -20,7 +20,7 @@ apartments_arr = [
     bedrooms: 3, 
     bathrooms: 3, 
     pets: "maybe",
-    image: "https://myotakuworld.com/wp-content/uploads/2021/02/Yuukos-Shop-From-xxxHOLiC-1-1.png?ezimgfmt=ng:webp/ngcb7"
+    image: "https://1.bp.blogspot.com/-mYxnZvpHri8/WjqqQd945hI/AAAAAAAASqU/SKg7chptEh4rwrVdwRYO_0af7KM1A6F7ACLcBGAs/s1600/haruhi201-21m54s.png"
 },
 
 
@@ -34,7 +34,7 @@ apartments_arr = [
     bedrooms: 100, 
     bathrooms: 1, 
     pets: "yes",
-    image: "https://myotakuworld.com/wp-content/uploads/2021/02/Kikis-Home-From-Majo-no-Takkyuubin-1-1.jpeg?ezimgfmt=ng:webp/ngcb7"
+    image: "https://cdna.artstation.com/p/assets/images/images/019/494/342/medium/daffa-arramy-templefinish.jpg?1563765945"
 },
 
 
@@ -48,7 +48,7 @@ apartments_arr = [
     bedrooms: 1, 
     bathrooms: 19, 
     pets: "peasants",
-    image: "https://myotakuworld.com/wp-content/uploads/2021/02/Amasawas-Antique-Shop-From-Mimi-wo-Sumaseba.jpeg?ezimgfmt=ng:webp/ngcb7"
+    image: "https://mfiles.alphacoders.com/957/957119.jpg"
 }]
 
 apartments_arr.each do |apartment_obj|

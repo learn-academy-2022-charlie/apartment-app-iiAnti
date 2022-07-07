@@ -20,6 +20,6 @@ describe("When Footer renders", () => {
    })
   it("displays a heading", () => {
     const footerHeading = footerRender.find("[className='app__footer']")
-    expect(footerHeading.text()).toEqual("Anti Apps")
+    expect(footerHeading.length).toEqual(1)
   })
 })
