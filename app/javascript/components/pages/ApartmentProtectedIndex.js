@@ -6,7 +6,7 @@ export default class ApartmentProtectedIndex extends Component {
     const {apartments} = this.props
     return (
       <>
-      <h3 className='app__index'> My Apartments</h3>
+      <h3 className='app__index'>My Apartments</h3>
       <div>
         {apartments && apartments.map((value, index) =>{
           return (

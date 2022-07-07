@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.readApartments
+    this.readApartments()
   }
 
 readApartments = () => {
@@ -36,6 +36,7 @@ readApartments = () => {
 
   render() {
     const {current_user} = this.props
+    console.log(this.state.apartments)
     return (
       
         <Router>

@@ -38,7 +38,7 @@ describe("When ApartmentProtectedIndex renders", () => {
   it("displays a heading", () => {
     const apartmentIndexHeading = apartmentIndexRender.find("[className='app__index']")
     expect(apartmentIndexHeading.length).toEqual(1)
-    expect(apartmentIndexHeading.text()).toEqual("Apartments")
+    expect(apartmentIndexHeading.text()).toEqual("My Apartments")
   })
     it("displays a card from reactstrap per apartment", () => {
       const apartmentIndexHeading = apartmentIndexRender.find("card")
