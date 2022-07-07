@@ -21,6 +21,11 @@ describe("When Home renders", () => {
   it("displays a heading", () => {
     const homeHeading = homeRender.find("[className='app__home']")
     console.log("HOME", homeHeading.debug());
-    expect(homeHeading.text()).toEqual("Home")
+    expect(homeHeading.text()).toEqual("The perfect App with the perfect search for the perfect YOU")
   })
+  // it("has a description", () => {
+  //   const homeDes = homeRender.find("p")
+  //   console.log("HOME", homeDes.debug());
+  //   expect(homeHeading.text()).toEqual("")
+  // })
 })
