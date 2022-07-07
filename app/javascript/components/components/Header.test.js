@@ -23,4 +23,8 @@ describe("When Header renders", () => {
     expect(headerHeading.length).toEqual(1)
     expect(headerHeading.text()).toEqual("Hounty Bunter")
   })
+  it("displays 3 navlinks", () => {
+    const navLinkHeaderRender = headerRender.find("NavLink")
+    expect(navLinkHeaderRender.length).toEqual(3)
+})
 })
