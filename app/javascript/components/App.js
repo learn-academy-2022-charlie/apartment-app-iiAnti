@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.scss'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -13,6 +12,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+
+import ApartmentProtectedIndex from './pages/ApartmentProtectedIndex'
 
 class App extends Component {
   constructor(props){
@@ -34,6 +35,7 @@ readApartments = () => {
 }
 
   render() {
+    const {current_user} = this.props
     return (
       
         <Router>
@@ -41,6 +43,10 @@ readApartments = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/apartmentindex" render={props => <ApartmentIndex apartments={this.state.apartments} />} />
+            <Route path="/myapartments" render={props => {
+            let myApartments = this.state.apartments.filter(apart => apart.user_id === current_user.id)
+            return <ApartmentProtectedIndex apartments={myApartments} />
+          }}/>
             <Route path="/apartmentshow" component={ApartmentShow} />
             <Route path="/apartmentnew" component={ApartmentNew} />
             <Route path="/apartmentedit" component={ApartmentEdit} />

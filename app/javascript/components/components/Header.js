@@ -20,14 +20,18 @@ class Header extends Component {
       <div className='app__navbar'>
         <h1 className='app__header'>Hounty Bunter</h1>
 
-        <NavLink  to='/'>
-      </NavLink>
+        <NavLink className='header__search' to='/'>Home</NavLink>
+
       <NavLink className='header__search' to='/apartmentindex'>
         Find an Apartment 
       </NavLink>
       <NavLink className='header__search' to='/apartmentnew'>
         Add an apartment
       </NavLink>
+      <NavLink className='header__search' to='/myapartments'>
+              My Apartments
+        </NavLink>
+      
 
         <Nav className='header__navLink'>
           {logged_in &&
@@ -45,9 +49,14 @@ class Header extends Component {
               <a href={new_user_route} className="nav-link">Sign Up</a>
             </NavItem>
           }
+
+          
+          
         </Nav>
+        <NavLink  to='/'>
         <img src='https://image.myanimelist.net/ui/99GOZ3F8HXZ2fI0ojlONSm0OVn0eyDcH10p1whUP9uWJ5IfRRa4y56yuUdQsj9kQ1mkjPU2gbQeLh4gDdud9lg_jql17tZcQllBoBFG6eRAOqFe5O3tyKYR2sYtWosM4wgx60AfEIj46hW-PrqlZaA' width='100%' alt='House logo:click to go home'
             className='header__logo'/>
+            </NavLink>
         </div>
       </>
     )
