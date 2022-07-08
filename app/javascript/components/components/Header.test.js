@@ -25,6 +25,6 @@ describe("When Header renders", () => {
   })
   it("displays 3 navlinks", () => {
     const navLinkHeaderRender = headerRender.find("NavLink")
-    expect(navLinkHeaderRender.length).toEqual(4)
+    expect(navLinkHeaderRender.length).toEqual(5)
 })
 })

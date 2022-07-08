@@ -53,7 +53,10 @@ class Header extends Component {
           
           
         </Nav>
-       
+        <NavLink  to='/'>
+        <img src='https://image.myanimelist.net/ui/99GOZ3F8HXZ2fI0ojlONSm0OVn0eyDcH10p1whUP9uWJ5IfRRa4y56yuUdQsj9kQ1mkjPU2gbQeLh4gDdud9lg_jql17tZcQllBoBFG6eRAOqFe5O3tyKYR2sYtWosM4wgx60AfEIj46hW-PrqlZaA' width='100%' alt='House logo:click to go home'
+            className='header__logo'/>
+            </NavLink>
         </div>
       </>
     )

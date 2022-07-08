@@ -36,12 +36,12 @@ describe("When ApartmentIndex renders", () => {
     apartmentIndexRender = shallow(<ApartmentIndex {...props}/>)
   })
   it("displays a heading", () => {
-    const apartmentIndexHeading = apartmentIndexRender.find("[className='index__head']")
+    const apartmentIndexHeading = apartmentIndexRender.find("[className='app__index']")
     expect(apartmentIndexHeading.length).toEqual(1)
     expect(apartmentIndexHeading.text()).toEqual("Apartments")
   })
     it("displays a card from reactstrap per apartment", () => {
-      const apartmentIndexHeading = apartmentIndexRender.find("[className='index__card']")
+      const apartmentIndexHeading = apartmentIndexRender.find("card")
       expect(apartmentIndexHeading.length).toEqual(1)
   })
 })  
