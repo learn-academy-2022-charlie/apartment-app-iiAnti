@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Apartment, type: :model do
 
-# coming back to this later
-
   user = User.where(email: 'test@example.com').first_or_create(password: '12345678', password_confirmation: '12345678')
 
   it 'can create an apartment' do
@@ -60,6 +58,9 @@ RSpec.describe Apartment, type: :model do
     
     expect(apartment.errors[:city]).to_not be_empty
   end
+
+# will finish the rest later
+
   it 'cant create ams aprt without valid attributes : min length ' do
 
     apartment = user.apartments.create(

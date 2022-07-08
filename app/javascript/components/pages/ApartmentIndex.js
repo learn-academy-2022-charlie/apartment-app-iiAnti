@@ -11,37 +11,32 @@ export default class ApartmentIndex extends Component {
       <h3 className='index__head'>Apartments</h3>
       
         {apartments && apartments.map((value, index) =>{
-          return (
-        
-            <Card className='index__card' key={index}>
-              <CardImg src={value.image} alt='card image'/>
-              <CardBody>
-                <CardTitle tag="h5">
-                  {value.street}
-                </CardTitle>
-                  <CardSubtitle>
-                    {value.city}
-                  </CardSubtitle> 
-                    <CardText>
-                      {value.bedrooms}
-                    </CardText>
-                    <CardText>
-                      {value.bathrooms}
-                    </CardText>
-                    
-                  
-                  <NavLink className='details' to={`/apartmentshow/${value.id}`}>
-                    See more details
-                  </NavLink>
-                  
-              </CardBody>
-            </Card>
+            return (
           
-          )
-        })
+              <Card className='index__card' key={index}>
+                <CardImg src={value.image} alt='card image'/>
+                <CardBody>
+                  <CardTitle tag="h5">
+                    {value.street}
+                  </CardTitle>
+                    <CardSubtitle>
+                      {value.city}
+                    </CardSubtitle> 
+                      <CardText>
+                        {value.bedrooms}
+                      </CardText>
+                      <CardText>
+                        {value.bathrooms}
+                      </CardText>
+                    <NavLink className='details' to={`/apartmentshow/${value.id}`}>
+                      See more details
+                    </NavLink>
+                </CardBody>
+              </Card>
+            )
+          })
         }
       </div>
-      
       </>
     )
   }
