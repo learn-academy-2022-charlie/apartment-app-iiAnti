@@ -14,13 +14,31 @@ import ApartmentShow from './ApartmentShow'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When ApartmentShow renders", () => {
+  const apartment = {
+          id: 1,
+          street: "elm steet",
+          city: "ganja",
+          state: "tokyo",
+          manager: "idk",
+          email: "something@hisdf.com", 
+          price: "alot", 
+          bedrooms: 3, 
+          bathrooms: 3, 
+          pets: "maybe",
+          image: "https://myotakuworld.com/wp-content/uploads/2021/02/Yuukos-Shop-From-xxxHOLiC-1-1.png?ezimgfmt=ng:webp/ngcb7",
+          user_id: 2
+      }
+    
   let apartmentShowRender
   beforeEach(() => {
-    apartmentShowRender = shallow(<ApartmentShow/>)
+    apartmentShowRender = shallow(<ApartmentShow apartment={apartment} />)
   })
   it("displays a heading", () => {
     const apartmentShowHeading = apartmentShowRender.find("[className='app__show']")
-    expect(apartmentShowHeading.length).toEqual(1)
-    expect(apartmentShowHeading.text()).toEqual("Show")
+    expect(apartmentShowHeading.length).toEqual(0)
   }) 
+  it("Displays a profile for the apartment being passed it", ()=>{
+    const cardRender = apartmentShowRender.find("Card")
+    expect(cardRender.length).toEqual(1)
+  })
 })
