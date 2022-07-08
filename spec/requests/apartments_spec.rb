@@ -20,7 +20,7 @@ RSpec.describe "Apartments", type: :request do
         pets: "string",
         image: "www.urlhelper.com"
       )
-
+ 
       get '/apartments'
 
       apartments = JSON.parse(response.body)
