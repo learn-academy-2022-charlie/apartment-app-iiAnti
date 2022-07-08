@@ -25,7 +25,7 @@ class ApartmentsController < ApplicationController
          :manager,
          :email,
          :price,
-         :bedrooms,
+         :bedrooms, 
          :bathrooms,
          :pets,
          :image,

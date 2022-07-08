@@ -76,7 +76,7 @@ RSpec.describe Apartment, type: :model do
       image: "helpr.m"
     )
 
-    
+     
     expect(apartment.errors[:image]).to_not be_empty
   end
 end
